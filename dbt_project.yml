@@ -18,13 +18,10 @@ data-paths: ["data"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-# directory which will store compiled SQL files
-target-path: "target"
-
-# directories to be removed by `dbt clean`
-clean-targets:
-    - "target"
-    - "dbt_modules"
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_modules"
 
 
 
@@ -38,5 +35,5 @@ models:
   my_new_project:
     # Applies to all files under models/example/
     example:
-      materialized: view
+      +materialized: view
 
