@@ -24,6 +24,7 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_modules"
 
 
+
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
@@ -35,3 +36,4 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: view
+
